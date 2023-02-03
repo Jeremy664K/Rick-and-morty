@@ -32,5 +32,5 @@ async function seeMore() {
     window.scrollTo(0, position);
 }
 
-showCharacters();
+showCharacters(page);
 $charactersMoreBtn.addEventListener("click", seeMore);
