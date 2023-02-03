@@ -1,0 +1,18 @@
+{
+    "name": "rick-and-morty",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --fix",
+        "watch": "sass --watch scss/styles.scss css/styles.css"
+    },
+    "devDependencies": {
+        "eslint": "8.33.0",
+        "eslint-config-prettier": "8.6.0",
+        "prettier": "2.8.3",
+        "vite": "4.1.0"
+    }
+}
