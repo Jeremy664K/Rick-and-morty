@@ -1,0 +1,27 @@
+@use "../settings/var";
+
+%button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.12s, border-color 0.12s, color 0.12s;
+    font-size: var.$size-primary;
+    color: var.$color-black;
+    border: var.$border transparent;
+    padding: var.$space-x-small var.$space-small;
+    border-radius: var.$radius;
+
+    &--active {
+        border-color: var.$color-tertiary;
+    }
+}
+
+%button:hover {
+    color: var.$color-black;
+    background-color: var.$color-primary;
+}
+
+%button--active:hover {
+    color: var.$color-white;
+    background-color: var.$color-tertiary;
+}

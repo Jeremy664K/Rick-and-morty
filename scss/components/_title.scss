@@ -1,0 +1,17 @@
+@use "../settings/var";
+
+%title {
+    color: var.$color-secondary;
+    font-size: var.$size-title;
+    font-weight: 800;
+
+    &--gradient {
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    &--colorful {
+        background-image: var.$gradient-colorful;
+    }
+}

@@ -1,0 +1,136 @@
+@use "../settings/var";
+@use "../tools/tools";
+@use "../components/link";
+@use "../components/button";
+@use "../components/input";
+@use "../components/title";
+
+.characters {
+    &__inner {
+        @include tools.center();
+    }
+
+    &__data,
+    &__more {
+        @include tools.flex($gap: var.$space-small, $align: center);
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        @include tools.flex($gap: var.$space-small, $align: center);
+        width: 100%;
+        padding: var.$space-small;
+        border-radius: var.$radius;
+        background-color: var.$color-black-opacity;
+    }
+
+    &__found,
+    &__wrapper,
+    &__more {
+        margin: var.$space-long 0;
+    }
+
+    &__aside {
+        position: relative;
+        overflow: hidden;
+        border-radius: var.$radius-secondary;
+    }
+
+    &__portrait {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        @extend %title;
+        font-size: var.$size-subtitle;
+
+        &--gradient {
+            @extend %title--gradient;
+        }
+
+        &--colorful {
+            @extend %title--colorful;
+        }
+    }
+
+    &__status {
+        @include tools.flex($gap: var.$space-x-small, $align: center);
+        font-weight: 600;
+
+        &--Alive {
+            color: #4de455;
+        }
+
+        &--Dead {
+            color: #e4574d;
+        }
+    }
+
+    &__info {
+        color: var.$color-secondary;
+    }
+
+    &__button {
+        @extend %button;
+        color: var.$color-primary;
+        width: 100%;
+    }
+
+    &__link {
+        @extend %link;
+        display: flex;
+        color: var.$color-primary;
+
+        &--arrow {
+            position: fixed;
+            z-index: 3;
+            background-color: var.$bg-primary;
+            right: var.$space-small;
+            bottom: var.$space-small;
+        }
+
+        &--active {
+            @extend %link--active;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        &__card {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var.$space-x-small;
+        }
+
+        &__aside {
+            align-self: center;
+        }
+    }
+}
+
+.search {
+    margin: var.$space-small 0;
+
+    &__form {
+        @include tools.flex();
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__input {
+        @extend %input;
+    }
+
+    &__button {
+        @extend %button;
+
+        &--submit {
+            @extend %button--active;
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

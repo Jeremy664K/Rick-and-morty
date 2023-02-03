@@ -1,0 +1,104 @@
+@use "../settings/var";
+@use "../tools/tools";
+@use "../components/link";
+@use "../components/button";
+
+.header {
+    background-color: var.$bg-secondary;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+}
+
+.nav {
+    @include tools.center();
+    @include tools.flex($align: center, $justify: space-between);
+
+    &__logo {
+        aspect-ratio: 1 / 1;
+        max-width: 4.5rem;
+        transition: max-width 0.12s;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__logo--scroll {
+        max-width: 2.5rem;
+    }
+
+    &__ul {
+        @include tools.flex($align: center, $gap: var.$space-x-small);
+        list-style: none;
+        z-index: 1;
+    }
+
+    &__link {
+        @extend %link;
+
+        &--img {
+            @extend %link--img;
+        }
+
+        &--active {
+            @extend %link--active;
+        }
+    }
+
+    &__button {
+        @extend %button;
+    }
+
+    &__third {
+        display: none;
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 500px) {
+        &__ul {
+            position: fixed;
+            top: -200vh;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            gap: var.$space-small;
+            background-color: var.$bg-secondary;
+            transition: top 0.12s;
+        }
+
+        &__li {
+            padding: 0 var.$space-small;
+        }
+
+        &__li,
+        &__link {
+            display: block;
+            width: 100%;
+        }
+
+        &__link:not(.nav__link--active) {
+            border-bottom-color: var.$color-primary;
+        }
+
+        &__third {
+            display: block;
+        }
+
+        &__rect {
+            transition: transform 0.12s;
+        }
+
+        &__rect--topchange {
+            transform: translate(0.9375rem, -0.9375rem) rotate(45deg);
+        }
+
+        &__rect--middlechange {
+            transform: translate(2.5rem);
+        }
+
+        &__rect--bottomchange {
+            transform: translate(-1.25rem, 1.25rem) rotate(-45deg);
+        }
+    }
+}

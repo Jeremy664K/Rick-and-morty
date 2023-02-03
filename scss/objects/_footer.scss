@@ -1,0 +1,26 @@
+@use "../settings/var";
+@use "../tools/tools";
+@use "../components/link";
+
+.footer {
+    background-color: var.$bg-secondary;
+
+    &__inner {
+        @include tools.center();
+        @include tools.flex($justify: space-between);
+        flex-wrap: wrap;
+        margin-top: var.$space-long;
+    }
+
+    &__link {
+        @extend %link;
+        font-size: var.$size-small;
+    }
+
+    @media only screen and (max-width: 500px) {
+        &__link {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

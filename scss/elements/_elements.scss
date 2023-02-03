@@ -1,0 +1,14 @@
+@use "../settings/var";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var.$font-primary;
+    font-size: var.$size-primary;
+    background-color: var.$bg-primary;
+    color: var.$color-primary;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+}

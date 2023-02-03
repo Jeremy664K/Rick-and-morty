@@ -1,0 +1,13 @@
+@use "../settings/var";
+
+%input {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-family: var.$font-primary;
+    font-size: var.$size-primary;
+    background-color: var.$color-primary;
+    border: var.$border var.$color-tertiary;
+    border-radius: var.$radius;
+    padding: var.$space-x-small var.$space-long var.$space-x-small var.$space-small;
+}

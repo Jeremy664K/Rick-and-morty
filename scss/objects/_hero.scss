@@ -1,0 +1,45 @@
+@use "../settings/var";
+@use "../tools/tools";
+@use "../components/title";
+
+.hero {
+    @include tools.flex($justify: center, $align: center);
+    background-color: var.$bg-secondary;
+    min-height: 85vh;
+    text-align: center;
+
+    &__inner {
+        @include tools.center();
+    }
+
+    &__title {
+        @extend %title;
+
+        &--gradient {
+            @extend %title--gradient;
+        }
+
+        &--colorful {
+            @extend %title--colorful;
+        }
+    }
+
+    &__subtitle {
+        font-size: var.$size-subtitle;
+        color: var.$color-black-opacity;
+    }
+
+    @media only screen and (max-width: 1115px) {
+        &__title {
+            font-size: 5rem;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        &__title {
+            margin-bottom: var.$space-small;
+            font-size: 4rem;
+            line-height: 1;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.nav__ul--visible {
+    top: 0;
+}
+
+.body--event {
+    overflow-y: hidden;
+}
+
+@media (prefers-reduced-motion) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .nav__link,
+    .nav__logo,
+    .nav__button,
+    .nav__rect,
+    .nav__ul,
+    .search__button,
+    .characters__button,
+    .footer__link,
+    .characters__link {
+        transition: none;
+        animation: none;
+    }
+}
