@@ -36,3 +36,11 @@ export function buildCharacter({ image, name, location, status, species, origin 
 
     return character;
 }
+
+export function buildError(message) {
+    const error = document.createElement("article");
+    error.classList.add("characters__card");
+    error.innerHTML = message;
+
+    return error;
+}
