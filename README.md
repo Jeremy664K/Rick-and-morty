@@ -22,3 +22,18 @@ Buscador de **personajes** de la serie **Rick and Morty** consumiendo una **api*
 👉 Busca y diviértete con todo el contenido de los personajes de Rick and Morty.
 
 ![Personajes de Rick and Morty](./images/readme/characters.png)
+
+# Instalación y uso 🎖️
+
+**¡Código abierto al mundo!**    
+
+- Puedes utilizar el producto realizando un `git clone https://github.com/jevmydev/Rick-and-morty` en tu terminal.  
+- Luego emplear `npm run dev` en tu terminal para desplegar un entorno de desarrollo en la web.  
+
+También dispones de: 
+
+- `npm run watch`: Guardar los cambios de Sass automaticamente  
+- `npm run build`: Empaquetar los módulos y construir un distribuible. 
+- `npm run preview`: Despliege de un entorno de preview del distribuible.  
+- `npm run lint`: Ejecutar eslint y arreglar los errores en el código.   
+- `npm run format`: Ejecutar prettier y formatear el código.  
